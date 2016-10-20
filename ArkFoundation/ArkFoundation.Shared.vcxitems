@@ -25,6 +25,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkFoundation\Runtime\AFRuntimeType.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\AFDebug.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\AFString.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Refrence\AFRefrenceObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Runtime\AFRuntimeObject.cpp" />

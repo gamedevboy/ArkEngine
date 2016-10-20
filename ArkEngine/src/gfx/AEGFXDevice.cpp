@@ -27,11 +27,13 @@ void ArkEngine::GFX::AEGFXDevice::Init()
 	AF_ASSERT(impl->_eglDisplay != EGL_NO_DISPLAY);
 
 	EGLint majorVersion, minorVersion;
-	AF_ASSERT(eglInitialize(impl->_eglDisplay, &majorVersion, &minorVersion));
+	AF_ASSERT(!eglInitialize(impl->_eglDisplay, &majorVersion, &minorVersion));
+
+	ArkFoundation::AFLog(L"eglInitialize Version %d.%d", majorVersion, minorVersion);
 
 	EGLint numConfigs;
 	AF_ASSERT(eglGetConfigs(impl->_eglDisplay, nullptr, 0, &numConfigs));
-
+	
 	EGLint attributes[] =
 	{
 		EGL_RENDERABLE_TYPE, 0,
