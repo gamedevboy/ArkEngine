@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkFoundation\AFString.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkFoundation\Refrence\AFRefrenceObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkFoundation\Runtime\AERuntimeProperty.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkFoundation\Runtime\AERuntimeTypeInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkFoundation\AFInternalImplType.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkFoundation\Runtime\AFRuntimeObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkFoundation\Refrence\AFRefrence.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkFoundation\Runtime\AFRuntimeType.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\AFString.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Refrence\AFRefrenceObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Runtime\AFRuntimeObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Runtime\AFRuntimeTypeInfo.cpp" />
+  </ItemGroup>
+</Project>

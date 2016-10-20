@@ -27,3 +27,10 @@
 *.exe
 *.out
 *.app
+.vs/
+ArkFoundation/Debug/
+ArkEngineTest/Debug/
+Debug/
+*.user
+ipch/
+*.db
