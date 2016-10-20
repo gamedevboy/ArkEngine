@@ -10,6 +10,8 @@
 
 #include <iostream>
 #include "ArkFoundation/Runtime/AERuntimeProperty.h"
+#include <ArkEngine/Gameplay/AEGameplay.h>
+#include <ArkEngine/Platform/Window/AEPlatformWindow.h>
 
 /**
  * \brief 
@@ -27,20 +29,15 @@
  * --------------------------------------
  * midi lib 
  */
-void main()
+
+class MyGameplay : public ArkEngine::Gameplay::AEGameplay
 {
-	//auto c = p::PropertyInstance;
-	ArkEngine::GFX::AEGFXDevice device;
-	ArkEngine::AEModuleManager::Get().Initialize();
+	ArkEngine::Platform::Window::AEPlatformWindow _window;
+	ArkEngine::GFX::AEGFXDevice _gfxDevice;
 
-
-	auto& type = device.GetType();
-	std::wcout << type.GetName() << std::endl;
-
-	auto& atype = ArkFoundation::Runtime::AFTypeOf<ArkEngine::AEModule>();
-	std::wcout << atype.GetName() << std::endl;
-
-	ArkFoundation::Runtime::AFRuntimeProperty::Register(&ArkEngine::GFX::AEGFXDevice::Version, L"", L"", L"");
-
-	ArkEngine::AEModuleManager::Get().Shutdown();
-}
+public:
+	void Init() override
+	{
+		_window.Init(L"hello", 800, 600);
+	}
+} theGameplay;

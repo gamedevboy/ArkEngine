@@ -3,5 +3,5 @@
 
 namespace ArkFoundation
 {
-	extern std::wstring ToString(std::string&& str);
+	extern std::wstring GetWString(std::string&& str);
 }

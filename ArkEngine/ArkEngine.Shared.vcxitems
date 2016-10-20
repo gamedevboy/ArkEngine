@@ -16,13 +16,16 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkEngine\AEModule.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkEngine\AEModuleManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkEngine\Gameplay\AEGameplay.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkEngine\gfx\AEGFXContext.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkEngine\gfx\AEGFXDevice.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkEngine\platform\AEPlatform.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkEngine\Platform\Window\AEPlatformWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)src\AEModule.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\AEModuleManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Gameplay\AEGameplay.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\gfx\AEGFXDevice.cpp" />
   </ItemGroup>
 </Project>

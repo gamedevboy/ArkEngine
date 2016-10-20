@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\platform\windows\AEPlatform.cpp">
+    <ClCompile Include="src\Platform\Window\AEPlatformWindow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\WindowsDesktop\AEPlatform.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

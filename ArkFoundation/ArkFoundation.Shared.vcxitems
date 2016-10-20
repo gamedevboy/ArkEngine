@@ -14,6 +14,7 @@
     <ProjectCapability Include="SourceItemsFromImports" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkFoundation\AFDebug.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkFoundation\AFString.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkFoundation\Refrence\AFRefrenceObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)include\ArkFoundation\Runtime\AERuntimeProperty.h" />

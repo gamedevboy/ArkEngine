@@ -1,10 +1,11 @@
 #pragma once
 
+#include <unordered_map>
+
 #include <ArkFoundation/AFString.h>
 
 #include "AFRuntimeObject.h"
 #include "AERuntimeTypeInfo.h"
-#include <unordered_map>
 
 namespace ArkFoundation
 {
@@ -30,7 +31,7 @@ namespace ArkFoundation
 
 				std::wstring GetName() const override
 				{
-					return ToString(typeid(_Ty).name());
+					return GetWString(typeid(_Ty).name());
 				}
 			};
 

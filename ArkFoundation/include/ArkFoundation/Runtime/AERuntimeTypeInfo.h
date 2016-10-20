@@ -18,7 +18,7 @@ namespace ArkFoundation
 			void RegisterProperty(const AFRuntimeProperty& property);
 			const AFRuntimeProperty* GetProperty(std::wstring propertyName) const;
 		private:
-			std::unordered_map<std::wstring, const AFRuntimeProperty&> _propertyMap;
+			std::unordered_map<std::wstring, const AFRuntimeProperty*> _propertyMap;
 		};
 	}
 }

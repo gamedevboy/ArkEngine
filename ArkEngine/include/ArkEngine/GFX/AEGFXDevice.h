@@ -6,7 +6,7 @@ namespace ArkEngine
 {
 	namespace GFX
 	{
-		class AF_RUNTIME_TYPE(AEGFXDevice, AEModule, ArkFoundation::AFInternalImplementType<AEGFXDevice>)
+		class AF_RUNTIME_TYPE(AEGFXDevice, AEModule, public ArkFoundation::AFInternalImplementType<AEGFXDevice>)
 		{
 		public:
 			AEGFXDevice();

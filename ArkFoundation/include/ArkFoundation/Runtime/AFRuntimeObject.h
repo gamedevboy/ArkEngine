@@ -24,7 +24,7 @@ namespace ArkFoundation
 			virtual const AFRuntimeTypeInfo& GetType() const;
 
 			virtual std::wstring ToString();
-			virtual int GetHashCode();
+			virtual size_t GetHashCode();
 		};
 	}
 }

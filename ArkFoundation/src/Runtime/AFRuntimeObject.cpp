@@ -15,7 +15,7 @@ ArkFoundation::Runtime::AFRuntimeObject* AFRuntimeObjectTypeInfo::Create() const
 
 std::wstring AFRuntimeObjectTypeInfo::GetName() const
 {
-	return ArkFoundation::ToString(typeid(ArkFoundation::Runtime::AFRuntimeObject).name());
+	return ArkFoundation::GetWString(typeid(ArkFoundation::Runtime::AFRuntimeObject).name());
 }
 
 struct ArkFoundation::Runtime::AFRuntimeObject::Impl
@@ -75,10 +75,10 @@ const ArkFoundation::Runtime::AFRuntimeTypeInfo& ArkFoundation::Runtime::AFRunti
 
 std::wstring ArkFoundation::Runtime::AFRuntimeObject::ToString()
 {
-	return ArkFoundation::ToString(typeid(*this).name());
+	return ArkFoundation::GetWString(typeid(*this).name());
 }
 
-int ArkFoundation::Runtime::AFRuntimeObject::GetHashCode()
+size_t ArkFoundation::Runtime::AFRuntimeObject::GetHashCode()
 {
 	return std::hash<AFRuntimeObject*>()(this);
 }
