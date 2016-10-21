@@ -26,6 +26,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)src\AEModule.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\AEModuleManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Gameplay\AEGameplay.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\GFX\AEGFXContext.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\gfx\AEGFXDevice.cpp" />
   </ItemGroup>
 </Project>

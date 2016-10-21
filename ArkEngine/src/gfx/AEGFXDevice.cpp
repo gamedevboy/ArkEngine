@@ -7,7 +7,6 @@
 #pragma comment(lib, "libEGL.lib")
 #pragma comment(lib, "libGLESv2.lib")
 
-
 AF_DECLARE_INTERNAL_IMPLEMENT(ArkEngine::GFX::AEGFXDevice,
 {
 	EGLDisplay _eglDisplay;
@@ -27,7 +26,7 @@ void ArkEngine::GFX::AEGFXDevice::Init()
 	AF_ASSERT(impl->_eglDisplay != EGL_NO_DISPLAY);
 
 	EGLint majorVersion, minorVersion;
-	AF_ASSERT(!eglInitialize(impl->_eglDisplay, &majorVersion, &minorVersion));
+	AF_ASSERT(eglInitialize(impl->_eglDisplay, &majorVersion, &minorVersion));
 
 	ArkFoundation::AFLog(L"eglInitialize Version %d.%d", majorVersion, minorVersion);
 
@@ -47,18 +46,12 @@ void ArkEngine::GFX::AEGFXDevice::Init()
 	EGLConfig eglConfig;
 	AF_ASSERT(eglChooseConfig(impl->_eglDisplay, attributes, &eglConfig, 1, &numConfigs));
 
-	//// Create a surface
-	//auto surface = eglCreateWindowSurface(eglDisplay, eglConfig, (EGLNativeWindowType)nullptr, nullptr);
-	//AF_ASSERT(surface != EGL_NO_SURFACE);
-/*
 	EGLint context_attributes[] = { EGL_CONTEXT_MAJOR_VERSION, 3,
 		EGL_CONTEXT_MINOR_VERSION, 1,
 		EGL_NONE };
 
-	
-
-	auto context = eglCreateContext(eglDisplay, configs[0], EGL_NO_CONTEXT,
-		context_attributes);*/
+	auto context = eglCreateContext(impl->_eglDisplay, eglConfig, EGL_NO_CONTEXT,
+		context_attributes);
 }
 
 void ArkEngine::GFX::AEGFXDevice::Shutdown()

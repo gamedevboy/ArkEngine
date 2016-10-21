@@ -7,7 +7,7 @@
 AF_DECLARE_INTERNAL_IMPLEMENT(ArkEngine::Platform::Window::AEPlatformWindow,
 {
 	HWND _hwnd;
-	static LRESULT WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+	static LRESULT __stdcall WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 	LRESULT OnWindowProc(UINT uMsg, WPARAM wParam, LPARAM lParam);
 });
 

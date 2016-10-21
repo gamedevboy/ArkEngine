@@ -11,7 +11,7 @@ namespace ArkFoundation
 			template<typename _ClassType, typename _PropertyType>
 			static AFRuntimeProperty Register(_PropertyType _ClassType::* m, std::wstring name, std::wstring desc, std::wstring catalog)
 			{
-				auto type = typeid(m).name();
+				//auto type = typeid(m).name();
 
 				return AFRuntimeProperty();
 			}
